@@ -1,4 +1,5 @@
-let resetUrl = "https://password-reset-api.herokuapp.com/changePassword";
+let resetUrl =
+	"https://password-reset-api.herokuapp.com/forgotPassword/changePassword";
 
 $(".alert").hide();
 
