@@ -1,4 +1,5 @@
-let forgetPasswordUrl = "http://localhost:8000/forgotPassword";
+let forgetPasswordUrl =
+	"https://password-reset-api.herokuapp.com/forgotPassword";
 
 $(".alert").hide();
 

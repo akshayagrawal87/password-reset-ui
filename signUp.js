@@ -1,4 +1,4 @@
-let registerUrl = "http://localhost:8000/register";
+let registerUrl = "https://password-reset-api.herokuapp.com/register";
 
 $(".alert").hide();
 

@@ -1,4 +1,4 @@
-let loginUrl = "http://localhost:8000/login";
+let loginUrl = "https://password-reset-api.herokuapp.com/login";
 
 $(".alert").hide();
 

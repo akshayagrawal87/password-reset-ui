@@ -1,4 +1,4 @@
-let resetUrl = "http://localhost:8000/forgotPassword/changePassword";
+let resetUrl = "https://password-reset-api.herokuapp.com/changePassword";
 
 $(".alert").hide();
 
@@ -41,9 +41,8 @@ async function checkOnSubmit() {
 	if (data.changed) {
 		location.href = "outputPages/passwordChangeSuccess.html";
 	} else {
-
-			let alertMesssge = document.querySelector(".alertMessage");
-			alertMesssge.innerHTML = data.message;
+		let alertMesssge = document.querySelector(".alertMessage");
+		alertMesssge.innerHTML = data.message;
 
 		$(".alert").show();
 		await setTimeout(() => {
@@ -53,7 +52,5 @@ async function checkOnSubmit() {
 		setTimeout(() => {
 			location.href = "outputPages/passwordChangeFailed.html";
 		}, 3000);
-
-		
 	}
 }
