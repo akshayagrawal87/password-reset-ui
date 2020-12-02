@@ -1,4 +1,17 @@
-let loginUrl = "https://password-reset-api.herokuapp.com/login";
+//let loginUrl = "https://password-reset-api.herokuapp.com/login";
+
+let loginUrl = "http://localhost:8000/login";
+
+(async () => {
+	const response = await fetch(loginUrl, { credentials: "include" });
+	let data = await response.json();
+
+	console.log(data);
+
+	if (data.loggedIn) {
+		location.href = "welcome.html";
+	}
+})();
 
 $(".alert").hide();
 
@@ -22,6 +35,9 @@ let loginButton = document.querySelector(".loginButton");
 })();
 
 async function checkOnSubmit() {
+	loginButton.innerHTML = ` <span class="spinner-grow spinner-grow-sm"></span>
+  Loading..`;
+
 	let body = {
 		username: email.value,
 		password: password.value,

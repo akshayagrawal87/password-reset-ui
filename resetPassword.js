@@ -24,6 +24,8 @@ let resetButton = document.querySelector(".resetButton");
 })();
 
 async function checkOnSubmit() {
+	resetButton.innerHTML = ` <span class="spinner-grow spinner-grow-sm"></span>
+  Loading..`;
 	let body = {
 		username: email.value,
 		password: password.value,
