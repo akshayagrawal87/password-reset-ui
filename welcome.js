@@ -1,8 +1,8 @@
 let logoutUrl = "https://password-reset-api.herokuapp.com/logout";
 
-//let loginUrl = "https://password-reset-api.herokuapp.com/login";
+let loginUrl = "https://password-reset-api.herokuapp.com/login";
 
-let loginUrl = "http://localhost:8000/login";
+//let loginUrl = "http://localhost:8000/login";
 
 (async () => {
 	const response = await fetch(loginUrl, { credentials: "include" });
