@@ -22,6 +22,13 @@ let registerButton = document.querySelector(".registerButton");
 })();
 
 async function checkOnSubmit() {
+	let registerButtonDiv = document.querySelector("#registerButtonDiv");
+
+	registerButtonDiv.innerHTML = `<button class=" w-100 btn btn-outline-dark py-2" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  Loading...
+</button>`;
+
 	let body = {
 		username: email.value,
 		password: password.value,
@@ -46,6 +53,7 @@ async function checkOnSubmit() {
 		$(".alert").show();
 		setTimeout(() => {
 			$(".alert").hide();
-		}, 9000);
+			location.reload();
+		}, 4000);
 	}
 }
